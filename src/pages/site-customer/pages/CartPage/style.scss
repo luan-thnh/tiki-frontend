@@ -1,0 +1,231 @@
+// sass .\src\site-customer\pages\cart\style.scss .\src\site-customer\pages\cart\style.css --watch
+
+@import '../../scss/bases/base';
+
+.cart {
+  padding: 20px 12px;
+
+  &--heading {
+    @include heading4;
+
+    margin-top: 32px;
+    font-weight: 500;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 999;
+  }
+
+  &__container {
+    @include dFlex($align: start, $gap: 20px);
+  }
+
+  &__table {
+    width: calc(100% - 340px);
+  }
+
+  &__table-head {
+    position: sticky;
+    top: 20px;
+    z-index: 99;
+    margin-bottom: 12px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      width: 100%;
+      height: 80px;
+      background-color: $bgPrimary;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 12px;
+      background-color: $bgPrimary;
+    }
+  }
+
+  &__table-group {
+    margin-bottom: 12px;
+  }
+
+  &__table-row {
+    padding: 9px 16px;
+    display: grid;
+    grid-template-columns: 400px 170px 100px 170px 30px;
+    align-items: center;
+    gap: 30px;
+    background-color: $white;
+    border-radius: 4px;
+  }
+
+  &__table-col {
+    @include dFlex(start);
+  }
+
+  &__table-label {
+    @include dFlex($gap: 8px);
+  }
+
+  &__table-icon-home {
+    width: 15px;
+    height: 15px;
+  }
+
+  &__table-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: $blueMedium;
+    margin-right: 12px;
+  }
+
+  &__table-product-image {
+    width: 76px;
+    height: 76px;
+    background-color: $grayLighter;
+  }
+
+  &__table-product {
+    @include dFlex(start, $gap: 8px);
+    flex: 1;
+  }
+
+  &__table-quantity {
+    @include dFlex(start);
+
+    width: fit-content;
+    border-radius: 4px;
+    border: 1px solid $lineColor;
+    height: 30px;
+  }
+
+  &__table-quantity-input {
+    width: 40px;
+    height: 100%;
+    text-align: center;
+    border-left: 1px solid $lineColor;
+    border-right: 1px solid $lineColor;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__table-quantity-btn {
+    @include dFlex(center);
+
+    width: 30px;
+    height: 100%;
+
+    &.disable {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+  &__table-price {
+    @include dFlex(start, end, 8px);
+    margin: 0 15px;
+
+    .price-current {
+      font-weight: 500;
+    }
+
+    .price-discount {
+      font-size: 11px;
+      color: $grayMedium;
+      text-decoration: line-through;
+    }
+  }
+
+  &__table-money {
+    font-weight: 500;
+    color: $redMedium;
+  }
+
+  &__table-product-name {
+    @include textOverflowEllipsis(2);
+    flex: 1;
+  }
+
+  &__table-seller {
+    @include heading5;
+  }
+
+  &__checkout {
+    width: 340px;
+    flex: 1;
+  }
+
+  &__checkout-coupon,
+  &__checkout-price {
+    background-color: $white;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+
+  &__checkout-coupon {
+    &--info {
+      @include dFlex($gap: 8px);
+    }
+  }
+
+  &__checkout-coupon-choice {
+    @include dFlex;
+
+    margin-top: 30px;
+    color: $blueDark;
+  }
+
+  &__checkout-coupon-header,
+  &__checkout-price-top,
+  &__checkout-price-body {
+    @include dFlex($align: end);
+  }
+
+  &__checkout-price {
+    padding: 0;
+    font-weight: 500;
+
+    &--final {
+      font-size: 22px;
+      color: $redMedium;
+    }
+  }
+
+  &__checkout-body {
+    position: sticky;
+    top: 20px;
+    z-index: 99;
+  }
+
+  &__checkout-price-top,
+  &__checkout-price-body {
+    padding: 17px 20px;
+    border-bottom: 1px solid $borderGray;
+  }
+
+  &__checkout-price-body {
+    border-bottom: 0;
+  }
+
+  &__checkout-price-btn {
+    @include heading5($white);
+
+    width: 100%;
+    padding: 14px 10px;
+    background-color: $redMedium;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
