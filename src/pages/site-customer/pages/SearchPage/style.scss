@@ -1,0 +1,30 @@
+@import '../../scss/bases/base';
+
+.search {
+  &__keyword {
+    padding: 32px 0;
+  }
+}
+
+.row {
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    select {
+      padding: 12px;
+    }
+  }
+}
+
+.product {
+  margin-bottom: 30px;
+}
+.product-inner {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.product img {
+  margin-bottom: 10px;
+}
