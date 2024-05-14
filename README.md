@@ -1,12 +1,4 @@
-## 1. Kiểm tra user khi order về limit sản phẩm và nếu user A order 70sp và user B order 70sp mà limit 100sp thì làm sao
 
-## 2. Khoa tai khoan user
-
-## 3. Tim kiem nang cao
-
-## 4. Comment chan code html hoac script
-
----
 
 ##
 
@@ -82,3 +74,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 1. Kiểm tra user khi order về limit sản phẩm và nếu user A order 70sp và user B order 70sp mà limit 100sp thì làm sao
+
+## 2. Khoa tai khoan user
+
+## 3. Tim kiem nang cao
+
+## 4. Comment chan code html hoac script
+
+---
